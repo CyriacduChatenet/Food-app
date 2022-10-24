@@ -1,6 +1,7 @@
 import { RouteProp, useRoute } from '@react-navigation/native';
 import React, {FC, useState} from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
+import Navbar from '../../components/navbar';
 import useFetch from '../../hooks/useFetch';
 import { RoutesParams } from '../../routes';
 

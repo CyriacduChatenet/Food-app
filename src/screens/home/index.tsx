@@ -5,6 +5,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 import {RoutesParams} from '../../routes';
 import useFetch from '../../hooks/useFetch';
+import Navbar from '../../components/navbar';
 
 const HomeScreen: FC = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RoutesParams>>();
@@ -23,8 +24,9 @@ const HomeScreen: FC = () => {
   };
   return (
     <View>
+      <Navbar />
       <Text>Home page</Text>
-      <FlatList data={data} renderItem={renderItem} keyExtractor={(item : any) => item.strIdMeal} />
+      <FlatList data={data} renderItem={renderItem} keyExtractor={item => item.strIdMeal} />
     </View>
   );
 };
